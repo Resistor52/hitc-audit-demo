@@ -60,12 +60,16 @@ And this will allow you to log into Azure with your browser
 
 For this scan, we will use the service account on the machine. In this example, we are assuming that the service account in in a directory named "accesskey" off the users home directory and that the key is named "service_account.json" as instructed in [HitC Episode 10](https://github.com/nccgroup/ScoutSuite/wiki/Setup).
 
+Before we can run the scan, we have to enable the Cloud Resource Manager API. So search for "Cloud Resource Manager API" in the Google Cloud Console and click the "Enable" button"
+
 Simply run the command:
 
 ```
 python scout.py gcp --service-account "~/accesskey/service_account.json"
 
 ```
+
+While the scan runs, it will show red errors for services that have not been enabled. That is expected.
 
 ## Reviewing the Scans
 
